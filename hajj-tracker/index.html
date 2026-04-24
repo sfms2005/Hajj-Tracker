@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajj Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="القائمة">
+    <p class="sidebar-title">القائمة</p>
+    <a class="sidebar-link" href="index.html">الصفحة الرئيسية</a>
+    <a class="sidebar-link" href="about.html">من نحن</a>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="index.html" class="logo-link">Hajj Tracker</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main class="app-main" aria-label="الصفحة الرئيسية">
+      <section class="card">
+        <h1 class="page-title">أنت الآن في <span id="dynamic-title">ما قبل اليوم الثامن</span> من رحلة الحج</h1>
+      </section>
+
+      <section class="card" aria-label="نسبة التقدم">
+        <div class="progress-row">
+          <span class="progress-value" id="progress-text">1%</span>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <p class="motivation" id="motivation">ابدأ النية اليوم، فالبداية الصادقة تصنع رحلة مباركة.</p>
+      </section>
+
+      <section class="card journey-card" aria-label="مراحل الحج">
+        <div class="journey-grid">
+          <svg viewBox="0 0 320 420" aria-hidden="true">
+            <defs>
+              <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                <polygon points="0 0, 10 5, 0 10" fill="#1f6f43"></polygon>
+              </marker>
+            </defs>
+            <path d="M250 55 C215 30, 105 30, 70 55" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M78 102 C98 152, 210 152, 242 197" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M248 242 C210 270, 108 270, 70 242" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M72 286 C102 330, 208 330, 248 364" class="journey-path" marker-end="url(#arrowHead)"></path>
+          </svg>
+
+          <div id="here-label">أنت هنا الآن</div>
+
+          <a href="day.html" class="step pos-1" id="step-1"><span class="step-num">1</span><span class="step-title">ما قبل اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-2" id="step-2"><span class="step-num">2</span><span class="step-title">اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-3" id="step-3"><span class="step-num">3</span><span class="step-title">يوم عرفة</span></a>
+          <a href="day.html" class="step pos-4" id="step-4"><span class="step-num">4</span><span class="step-title">اليوم العاشر</span></a>
+          <a href="day.html" class="step pos-5" id="step-5"><span class="step-num">5</span><span class="step-title">أيام التشريق</span></a>
+          <a href="day.html" class="step pos-6" id="step-6"><span class="step-num">6</span><span class="step-title">طواف الوداع</span></a>
+        </div>
+      </section>
+
+      <section class="actions-grid">
+        <a href="dua.html" class="btn-primary">أدعـيتي</a>
+        <a href="health.html" class="btn-secondary">مساعدة صحية</a>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajj Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="القائمة">
+    <p class="sidebar-title">القائمة</p>
+    <a class="sidebar-link" href="index.html">الصفحة الرئيسية</a>
+    <a class="sidebar-link" href="about.html">من نحن</a>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="index.html" class="logo-link">Hajj Tracker</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main class="app-main" aria-label="الصفحة الرئيسية">
+      <section class="card">
+        <h1 class="page-title">أنت الآن في <span id="dynamic-title">ما قبل اليوم الثامن</span> من رحلة الحج</h1>
+      </section>
+
+      <section class="card" aria-label="نسبة التقدم">
+        <div class="progress-row">
+          <span class="progress-value" id="progress-text">1%</span>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <p class="motivation" id="motivation">ابدأ النية اليوم، فالبداية الصادقة تصنع رحلة مباركة.</p>
+      </section>
+
+      <section class="card journey-card" aria-label="مراحل الحج">
+        <div class="journey-grid">
+          <svg viewBox="0 0 320 420" aria-hidden="true">
+            <defs>
+              <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                <polygon points="0 0, 10 5, 0 10" fill="#1f6f43"></polygon>
+              </marker>
+            </defs>
+            <path d="M250 55 C215 30, 105 30, 70 55" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M78 102 C98 152, 210 152, 242 197" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M248 242 C210 270, 108 270, 70 242" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M72 286 C102 330, 208 330, 248 364" class="journey-path" marker-end="url(#arrowHead)"></path>
+          </svg>
+
+          <div id="here-label">أنت هنا الآن</div>
+
+          <a href="day.html" class="step pos-1" id="step-1"><span class="step-num">1</span><span class="step-title">ما قبل اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-2" id="step-2"><span class="step-num">2</span><span class="step-title">اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-3" id="step-3"><span class="step-num">3</span><span class="step-title">يوم عرفة</span></a>
+          <a href="day.html" class="step pos-4" id="step-4"><span class="step-num">4</span><span class="step-title">اليوم العاشر</span></a>
+          <a href="day.html" class="step pos-5" id="step-5"><span class="step-num">5</span><span class="step-title">أيام التشريق</span></a>
+          <a href="day.html" class="step pos-6" id="step-6"><span class="step-num">6</span><span class="step-title">طواف الوداع</span></a>
+        </div>
+      </section>
+
+      <section class="actions-grid">
+        <a href="dua.html" class="btn-primary">أدعـيتي</a>
+        <a href="health.html" class="btn-secondary">مساعدة صحية</a>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajj Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="القائمة">
+    <p class="sidebar-title">القائمة</p>
+    <a class="sidebar-link" href="index.html">الصفحة الرئيسية</a>
+    <a class="sidebar-link" href="about.html">من نحن</a>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="index.html" class="logo-link">Hajj Tracker</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main class="app-main" aria-label="الصفحة الرئيسية">
+      <section class="card">
+        <h1 class="page-title">أنت الآن في <span id="dynamic-title">ما قبل اليوم الثامن</span> من رحلة الحج</h1>
+      </section>
+
+      <section class="card" aria-label="نسبة التقدم">
+        <div class="progress-row">
+          <span class="progress-value" id="progress-text">1%</span>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <p class="motivation" id="motivation">ابدأ النية اليوم، فالبداية الصادقة تصنع رحلة مباركة.</p>
+      </section>
+
+      <section class="card journey-card" aria-label="مراحل الحج">
+        <div class="journey-grid">
+          <svg viewBox="0 0 320 420" aria-hidden="true">
+            <defs>
+              <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                <polygon points="0 0, 10 5, 0 10" fill="#1f6f43"></polygon>
+              </marker>
+            </defs>
+            <path d="M250 55 C215 30, 105 30, 70 55" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M78 102 C98 152, 210 152, 242 197" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M248 242 C210 270, 108 270, 70 242" class="journey-path" marker-end="url(#arrowHead)"></path>
+            <path d="M72 286 C102 330, 208 330, 248 364" class="journey-path" marker-end="url(#arrowHead)"></path>
+          </svg>
+
+          <div id="here-label">أنت هنا الآن</div>
+
+          <a href="day.html" class="step pos-1" id="step-1"><span class="step-num">1</span><span class="step-title">ما قبل اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-2" id="step-2"><span class="step-num">2</span><span class="step-title">اليوم الثامن</span></a>
+          <a href="day.html" class="step pos-3" id="step-3"><span class="step-num">3</span><span class="step-title">يوم عرفة</span></a>
+          <a href="day.html" class="step pos-4" id="step-4"><span class="step-num">4</span><span class="step-title">اليوم العاشر</span></a>
+          <a href="day.html" class="step pos-5" id="step-5"><span class="step-num">5</span><span class="step-title">أيام التشريق</span></a>
+          <a href="day.html" class="step pos-6" id="step-6"><span class="step-num">6</span><span class="step-title">طواف الوداع</span></a>
+        </div>
+      </section>
+
+      <section class="actions-grid">
+        <a href="dua.html" class="btn-primary">أدعـيتي</a>
+        <a href="health.html" class="btn-secondary">مساعدة صحية</a>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajj Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="القائمة">
+    <p class="sidebar-title">القائمة</p>
+    <a class="sidebar-link" href="index.html">الصفحة الرئيسية</a>
+    <a class="sidebar-link" href="about.html">من نحن</a>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="index.html" class="logo-link">Hajj Tracker</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main class="app-main" aria-label="الصفحة الرئيسية">
+      <section class="card">
+        <h1 class="page-title">أنت الآن في <span id="dynamic-title">ما قبل اليوم الثامن</span> من رحلة الحج</h1>
+      </section>
+
+      <section class="card" aria-label="نسبة التقدم">
+        <div class="progress-row">
+          <span class="progress-value" id="progress-text">1%</span>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <p class="motivation" id="motivation">ابدأ النية اليوم، فالبداية الصادقة تصنع رحلة مباركة.</p>
+      </section>
+
+      <section class="card" aria-label="مراحل الحج">
+        <div class="journey-grid">
+          <a href="day.html" class="step" id="step-1"><span class="step-num">1</span><span class="step-title">ما قبل اليوم الثامن</span></a>
+          <a href="day.html" class="step" id="step-2"><span class="step-num">2</span><span class="step-title">اليوم الثامن</span></a>
+          <a href="day.html" class="step" id="step-3"><span class="step-num">3</span><span class="step-title">يوم عرفة</span></a>
+          <a href="day.html" class="step" id="step-4"><span class="step-num">4</span><span class="step-title">اليوم العاشر</span></a>
+          <a href="day.html" class="step" id="step-5"><span class="step-num">5</span><span class="step-title">أيام التشريق</span></a>
+          <a href="day.html" class="step" id="step-6"><span class="step-num">6</span><span class="step-title">طواف الوداع</span></a>
+        </div>
+      </section>
+
+      <section class="actions-grid">
+        <a href="dua.html" class="btn-primary">أدعـيتي</a>
+        <a href="health.html" class="btn-secondary">مساعدة صحية</a>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajj Tracker - Qased</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ----- Design tokens ----- */
+    :root {
+      --bg: #f4f6f3;
+      --surface: #eef2ec;
+      --card: #f8faf7;
+      --text: #173f2a;
+      --muted: #5f6f64;
+      --primary: #1f6f43;
+      --primary-dark: #145a34;
+      --line: #d7dfd7;
+      --step: #ecf1eb;
+      --shadow: 0 6px 18px rgba(20, 58, 34, 0.09);
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+      --sidebar-w: 250px;
+      --touch-min: 44px;
+      --space-section: clamp(1rem, 3.5vw, 1.35rem);
+      --transition-nav: 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ----- Base layout ----- */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Cairo", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: clamp(0.75rem, 3vw, 1rem);
+    }
+
+    body.nav-open {
+      overflow: hidden;
+    }
+
+    .page-shell {
+      width: 100%;
+      max-width: min(100%, 26.25rem);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: stretch;
+    }
+
+    .app {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-section);
+      position: relative;
+      flex: 1;
+    }
+
+    /* ----- Reusable ----- */
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-section);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e2e9e2;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(0.85rem, 3vw, 1rem);
+    }
+
+    /* ----- Nav overlay ----- */
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 40, 28, 0.45);
+      z-index: 90;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity var(--transition-nav), visibility var(--transition-nav);
+    }
+
+    .nav-overlay.is-visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* ----- Sidebar (slides from left) ----- */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: var(--sidebar-w);
+      max-width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: var(--card);
+      border-right: 1px solid var(--line);
+      box-shadow: 8px 0 24px rgba(20, 58, 34, 0.12);
+      z-index: 100;
+      visibility: hidden;
+      transition:
+        left var(--transition-nav),
+        visibility 0s linear 0.3s;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(1rem, 4vw, 1.25rem);
+      padding-top: max(1rem, env(safe-area-inset-top));
+    }
+
+    .sidebar.is-open {
+      left: 0;
+      visibility: visible;
+      transition:
+        left var(--transition-nav),
+        visibility 0s linear 0s;
+    }
+
+    .sidebar-title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      min-height: var(--touch-min);
+      padding: 0.5rem 0.75rem;
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: clamp(1rem, 3.2vw, 1.1rem);
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .sidebar-link:hover,
+    .sidebar-link:focus-visible {
+      background: var(--surface);
+      outline: none;
+    }
+
+    /* ----- Header ----- */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .menu-btn {
+      min-width: var(--touch-min);
+      min-height: var(--touch-min);
+      border: 0;
+      border-radius: 12px;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: var(--primary);
+      font-size: clamp(1.5rem, 5vw, 1.75rem);
+      line-height: 1;
+      transition: background 0.2s ease;
+    }
+
+    .menu-btn:hover,
+    .menu-btn:focus-visible {
+      background: rgba(31, 111, 67, 0.08);
+      outline: none;
+    }
+
+    .menu-icon {
+      display: block;
+      font-weight: 400;
+    }
+
+    .logo {
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: clamp(1.45rem, 5vw, 1.75rem);
+      line-height: 1;
+      letter-spacing: 0.2px;
+    }
+
+    /* ----- Hero ----- */
+    .hero {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(0.35rem, 2vw, 0.5rem);
+      margin-top: 0.25rem;
+    }
+
+    .hero .small {
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      color: #2f4538;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      margin: 0;
+      line-height: 1.2;
+      font-size: clamp(1.65rem, 7vw, 2.8rem);
+      color: var(--primary-dark);
+      font-weight: 800;
+      max-width: 100%;
+    }
+
+    .hero .subtitle {
+      color: #283c31;
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      font-weight: 500;
+    }
+
+    /* ----- Progress ----- */
+    .progress-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: clamp(0.65rem, 3vw, 0.85rem);
+      width: 100%;
+    }
+
+    .progress-track {
+      flex: 1;
+      min-width: 0;
+      height: clamp(14px, 4vw, 16px);
+      border-radius: 999px;
+      background: #e5ebe4;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    #progress-fill {
+      height: 62%;
+      min-height: 8px;
+      background: #1f6f43;
+      border-radius: 10px;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .progress-value {
+      flex-shrink: 0;
+      min-width: clamp(2.5rem, 15vw, 3rem);
+      text-align: center;
+      font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+      color: #295b3c;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .motivation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      color: #2f4036;
+      font-size: clamp(1rem, 3.8vw, 1.35rem);
+      padding-inline: clamp(0.75rem, 3vw, 1.1rem);
+    }
+
+    .heart {
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      color: #88a083;
+      flex-shrink: 0;
+    }
+
+    /* ----- Journey ----- */
+    .journey {
+      background: transparent;
+      border-radius: var(--radius-xl);
+      padding: 0.25rem 0;
+      width: 100%;
+    }
+
+    .journey-grid {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: clamp(0.75rem, 3vw, 1.15rem);
+      padding: clamp(0.75rem, 2vw, 1.1rem) 0.25rem 0.35rem;
+    }
+
+    .journey-grid svg {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .journey-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1rem, 2.5vw, 1.25rem) clamp(0.9rem, 2.2vw, 1.1rem);
+        align-items: center;
+        justify-items: center;
+        padding: clamp(1rem, 2vw, 1.1rem) 0.25rem 0.35rem;
+      }
+
+      .journey-grid svg {
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      width: clamp(6.25rem, 38vw, 8.125rem);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--step);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(0.65rem, 2.5vw, 1rem) clamp(0.5rem, 2vw, 0.75rem);
+      color: #2a4134;
+      box-shadow: 0 1px 4px rgba(23, 63, 42, 0.05);
+    }
+
+    .step .num {
+      font-weight: 800;
+      font-size: clamp(1.5rem, 6vw, 2.2rem);
+      line-height: 1;
+      color: #275f3c;
+      margin-bottom: 0.25rem;
+    }
+
+    .step .ttl {
+      font-size: clamp(0.85rem, 3.2vw, 1.1rem);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .step .sub {
+      font-size: clamp(0.78rem, 2.8vw, 0.92rem);
+      color: #48604f;
+      line-height: 1.2;
+      margin-top: 0.25rem;
+    }
+
+    .active-step {
+      background: #1f6f43;
+      color: white;
+      transform: scale(1.06);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-color: #1f6f43;
+      z-index: 2;
+    }
+
+    .inactive-step {
+      background: #e9efe9;
+      color: #333;
+    }
+
+    .active-step .num,
+    .active-step .ttl,
+    .active-step .sub {
+      color: white;
+    }
+
+    .inactive-step .num,
+    .inactive-step .ttl,
+    .inactive-step .sub {
+      color: #333;
+    }
+
+    #here-label {
+      position: absolute;
+      top: -0.5rem;
+      right: -0.35rem;
+      background: #1f6f43;
+      color: white;
+      padding: 0.3rem 0.55rem;
+      border-radius: 10px;
+      font-size: clamp(0.65rem, 2.5vw, 0.75rem);
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 5px 12px rgba(19, 77, 44, 0.2);
+      z-index: 3;
+    }
+
+    /* ----- CTA ----- */
+    .dua-button {
+      margin-top: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: max(5.25rem, var(--touch-min));
+      border-radius: 20px;
+      background: linear-gradient(180deg, #2f8653 0%, #1f6f43 100%);
+      color: #f5faf5;
+      text-decoration: none;
+      font-size: clamp(1.35rem, 5.5vw, 2rem);
+      font-weight: 800;
+      border: 1px solid #2a7448;
+      box-shadow: 0 10px 22px rgba(18, 84, 49, 0.22);
+      transition: filter 0.2s ease, transform 0.2s ease;
+      width: 100%;
+    }
+
+    .dua-button:hover {
+      filter: brightness(1.03);
+    }
+
+    .dua-button:active {
+      transform: translateY(1px);
+    }
+
+    /* ----- Mobile: progress full width, smaller type ----- */
+    @media (max-width: 480px) {
+      .progress-wrap {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .progress-value {
+        order: -1;
+        width: 100%;
+        text-align: center;
+      }
+
+      .progress-track {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 374px) {
+      body {
+        padding: 0.65rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.45rem, 8vw, 1.85rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="القائمة" aria-hidden="true">
+    <p class="sidebar-title">القائمة</p>
+    <nav class="sidebar-nav" aria-label="روابط الصفحة">
+      <a class="sidebar-link" href="#top">الرئيسية</a>
+      <a class="sidebar-link" href="about.html">من نحن</a>
+    </nav>
+  </aside>
+
+  <div class="page-shell">
+    <main class="app" id="top" aria-label="Hajj Tracker App">
+      <header class="topbar">
+        <div class="logo" aria-label="Qased Logo">Qased</div>
+        <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="sidebar">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+      </header>
+
+      <div class="stack">
+        <section class="hero" aria-label="Current Day">
+          <div class="small">أنت الآن في</div>
+          <h1 id="hajj-day">اليوم العاشر</h1>
+          <div class="subtitle">من رحلة الحج</div>
+        </section>
+
+        <section class="card" aria-label="Progress">
+          <div class="progress-wrap">
+            <span class="progress-value" id="progress-text">60%</span>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" aria-label="نسبة التقدم">
+              <div id="progress-fill"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card motivation" aria-label="Motivation">
+          <span class="heart" aria-hidden="true">❤</span>
+          <span>أنجزت الكثير ... والباقي بإذن الله يسير</span>
+        </section>
+
+        <section class="journey" aria-label="Journey Map">
+          <div class="journey-grid">
+            <svg viewBox="0 0 360 490" aria-hidden="true">
+              <defs>
+                <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                  <polygon points="0 0, 10 5, 0 10" fill="#1f6f43"></polygon>
+                </marker>
+              </defs>
+              <path d="M270 84 C235 48, 125 48, 90 84" stroke="#1f6f43" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrowHead)"/>
+              <path d="M90 114 C110 170, 225 170, 250 220" stroke="#1f6f43" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrowHead)"/>
+              <path d="M245 270 C210 298, 130 298, 95 270" stroke="#1f6f43" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrowHead)"/>
+              <path d="M90 300 C110 355, 225 355, 250 405" stroke="#1f6f43" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrowHead)"/>
+              <path d="M245 442 C210 468, 125 468, 90 442" stroke="#1f6f43" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrowHead)"/>
+            </svg>
+            <div id="here-label">أنت هنا الآن</div>
+
+            <article class="step inactive-step" id="step-1">
+              <div class="num">1</div>
+              <div class="ttl">ما قبل اليوم الثامن</div>
+            </article>
+
+            <article class="step inactive-step" id="step-2">
+              <div class="num">2</div>
+              <div class="ttl">اليوم الثامن</div>
+              <div class="sub">(يوم التروية)</div>
+            </article>
+
+            <article class="step inactive-step" id="step-3">
+              <div class="num">3</div>
+              <div class="ttl">يوم عرفة</div>
+            </article>
+
+            <article class="step inactive-step" id="step-4">
+              <div class="num">4</div>
+              <div class="ttl">اليوم العاشر</div>
+              <div class="sub">(يوم النحر)</div>
+            </article>
+
+            <article class="step inactive-step" id="step-5">
+              <div class="num">5</div>
+              <div class="ttl">أيام التشريق</div>
+              <div class="sub">(11-13)</div>
+            </article>
+
+            <article class="step inactive-step" id="step-6">
+              <div class="num">6</div>
+              <div class="ttl">طواف الوداع</div>
+            </article>
+          </div>
+        </section>
+
+        <a href="dua.html" class="dua-button">أدعـيتي</a>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const overlay = document.getElementById("nav-overlay");
+      const sidebar = document.getElementById("sidebar");
+      const menuBtn = document.getElementById("menu-btn");
+      const sidebarLinks = sidebar.querySelectorAll(".sidebar-link");
+
+      function openNav() {
+        sidebar.classList.add("is-open");
+        overlay.classList.add("is-visible");
+        overlay.setAttribute("aria-hidden", "false");
+        sidebar.setAttribute("aria-hidden", "false");
+        document.body.classList.add("nav-open");
+        menuBtn.setAttribute("aria-expanded", "true");
+        menuBtn.setAttribute("aria-label", "إغلاق القائمة");
+      }
+
+      function closeNav() {
+        sidebar.classList.remove("is-open");
+        overlay.classList.remove("is-visible");
+        overlay.setAttribute("aria-hidden", "true");
+        sidebar.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("nav-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute("aria-label", "فتح القائمة");
+      }
+
+      function toggleNav() {
+        if (sidebar.classList.contains("is-open")) {
+          closeNav();
+        } else {
+          openNav();
+        }
+      }
+
+      menuBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        toggleNav();
+      });
+
+      overlay.addEventListener("click", closeNav);
+
+      sidebarLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          closeNav();
+        });
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && sidebar.classList.contains("is-open")) {
+          closeNav();
+        }
+      });
+    })();
+
+    const today = new Date();
+    const formattedDate = today.toISOString().split("T")[0];
+
+    const hajjDays = {
+      "2026-05-23": "ما قبل اليوم الثامن",
+      "2026-05-24": "ما قبل اليوم الثامن",
+      "2026-05-25": "اليوم الثامن",
+      "2026-05-26": "اليوم التاسع",
+      "2026-05-27": "اليوم العاشر",
+      "2026-05-28": "أول أيام التشريق",
+      "2026-05-29": "ثاني أيام التشريق",
+      "2026-05-30": "ثالث أيام التشريق",
+      "2026-05-31": "ختام الرحلة",
+      "2026-06-01": "ختام الرحلة"
+    };
+
+    const selectedText = hajjDays[formattedDate] || "ما قبل اليوم الثامن";
+    document.getElementById("hajj-day").innerText = selectedText;
+
+    const progressMap = {
+      "2026-05-23": 1,
+      "2026-05-24": 10,
+      "2026-05-25": 20,
+      "2026-05-26": 40,
+      "2026-05-27": 60,
+      "2026-05-28": 75,
+      "2026-05-29": 90,
+      "2026-05-30": 100,
+      "2026-05-31": 100,
+      "2026-06-01": 100
+    };
+
+    let progress = progressMap[formattedDate];
+    if (progress === undefined) {
+      progress = 1;
+    }
+
+    document.getElementById("progress-text").innerText = progress + "%";
+    document.getElementById("progress-fill").style.width = progress + "%";
+    document.querySelector(".progress-track").setAttribute("aria-valuenow", progress);
+
+    const hajjSteps = {
+      "2026-05-23": "step-1",
+      "2026-05-24": "step-1",
+      "2026-05-25": "step-2",
+      "2026-05-26": "step-3",
+      "2026-05-27": "step-4",
+      "2026-05-28": "step-5",
+      "2026-05-29": "step-5",
+      "2026-05-30": "step-5",
+      "2026-05-31": "step-6",
+      "2026-06-01": "step-6"
+    };
+
+    const activeStepId = hajjSteps[formattedDate] || "step-1";
+
+    document.querySelectorAll(".step").forEach(function (el) {
+      el.classList.remove("active-step");
+      el.classList.add("inactive-step");
+    });
+
+    const label = document.getElementById("here-label");
+    const activeStep = document.getElementById(activeStepId);
+    if (activeStep) {
+      activeStep.classList.remove("inactive-step");
+      activeStep.classList.add("active-step");
+      activeStep.appendChild(label);
+    }
+  </script>
+</body>
+</html>

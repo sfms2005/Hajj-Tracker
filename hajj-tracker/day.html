@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رحلة اليوم - Hajj Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="day">
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="القائمة">
+    <p class="sidebar-title">القائمة</p>
+    <a class="sidebar-link" href="index.html">الصفحة الرئيسية</a>
+    <a class="sidebar-link" href="about.html">من نحن</a>
+  </aside>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="index.html" class="logo-link">Hajj Tracker</a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="فتح القائمة">☰</button>
+    </header>
+
+    <main class="app-main" aria-label="صفحة اليوم">
+      <section class="card">
+        <h1 class="page-title">أنت الآن تشاهد <span id="selected-day-title">ما قبل اليوم الثامن</span> من رحلة الحج</h1>
+      </section>
+
+      <section class="notice warning hidden" id="day-notice" aria-live="polite"></section>
+
+      <section class="card">
+        <h2 class="section-title">نبذة مختصرة</h2>
+        <p class="body-text" id="day-description">مرحلة تمهيدية قبل بدء مناسك الحج.</p>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">قائمة الأعمال</h2>
+        <ul class="checklist" id="checklist"></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">أدعية مقترحة</h2>
+        <div class="dua-mini-list" id="duas-mini-list"></div>
+      </section>
+
+      <a href="index.html" class="btn-primary">العودة للمسار</a>
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
